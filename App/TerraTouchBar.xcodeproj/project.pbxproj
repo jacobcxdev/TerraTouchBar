@@ -36,8 +36,6 @@
 		16AD4ADC23A458B400F350CA /* InventoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4ADB23A458B400F350CA /* InventoryBar.swift */; };
 		16AD4AE023A459E200F350CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4ADF23A459E200F350CA /* Item.swift */; };
 		16BCA02223A51502002208F4 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA02123A51502002208F4 /* InventoryView.swift */; };
-		16BCA02923A51F51002208F4 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BCA02823A51F51002208F4 /* DFRFoundation.framework */; };
-		16BCA02A23A51F51002208F4 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16BCA02823A51F51002208F4 /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		16BCA03923A54C78002208F4 /* TCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA03823A54C78002208F4 /* TCPServer.swift */; };
 		16BCA03B23A54D07002208F4 /* TCPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA03A23A54D07002208F4 /* TCPServerHandler.swift */; };
 		16BCA03E23A56530002208F4 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 16BCA03D23A56530002208F4 /* NIO */; };
@@ -57,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				16BCA02A23A51F51002208F4 /* DFRFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,8 +94,6 @@
 		16AD4ADB23A458B400F350CA /* InventoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryBar.swift; sourceTree = "<group>"; };
 		16AD4ADF23A459E200F350CA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		16BCA02123A51502002208F4 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
-		16BCA02423A51F26002208F4 /* DFRFoundation */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = DFRFoundation; path = ../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation; sourceTree = "<group>"; };
-		16BCA02823A51F51002208F4 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		16BCA03823A54C78002208F4 /* TCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPServer.swift; sourceTree = "<group>"; };
 		16BCA03A23A54D07002208F4 /* TCPServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPServerHandler.swift; sourceTree = "<group>"; };
 		16C253CB23A8135200C9E8C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */,
-				16BCA02923A51F51002208F4 /* DFRFoundation.framework in Frameworks */,
 				168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */,
 				166D4E7223A659DC00AEA5AD /* AppleScriptObjC.framework in Frameworks */,
 				16BCA03E23A56530002208F4 /* NIO in Frameworks */,
@@ -313,8 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */,
-				16BCA02823A51F51002208F4 /* DFRFoundation.framework */,
-				16BCA02423A51F26002208F4 /* DFRFoundation */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
