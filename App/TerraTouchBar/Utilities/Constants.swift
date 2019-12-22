@@ -15,14 +15,17 @@ struct Constants {
     /// Terraria runs at 60 ticks per second. Therefore, the length of time, in seconds, for a single tick is 1/60th of a second.
     static let tps: Double = 1 / 60
 
-    /// The total health held by one heart.
+    /// The total possible number of hearts.
+    static let totalHearts = 20
+
+    /// The total life held by one heart.
     static let heartCapacity = 20
 
     /// The total mana held by one mana star.
     static let manaCapacity = 20
 
-    /// The maximum health a Terraria player can hold without consuming any life fruit.
-    static let maxNonGoldHealth = 400
+    /// The maximum life a Terraria player can hold without consuming any life fruit.
+    static let maxNonGoldLife = 400
 
     // MARK: - TCP
 

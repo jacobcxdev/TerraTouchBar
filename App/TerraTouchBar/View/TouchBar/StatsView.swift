@@ -44,14 +44,33 @@ struct StatsView: View {
 
     // MARK: - Instance Methods
 
-    /// Returns the stats divisor, adjusted for buffs.
+    /// Returns the number of golden hearts.
+    private func goldenHeartCount() -> Int {
+        let lifeAboveMax = statsBar.maxLife - Constants.maxNonGoldLife
+        return lifeAboveMax > 0 && lifeAboveMax % 5 == 0 ? lifeAboveMax / 5 : 0
+    }
+
+    /// Returns the number of sprites for a given component.
     /// - Parameter component: The `StatsComponent` to use.
     /// - Returns:
-    ///   - The stats divisor, as an `Int`.
-    private func adjustedStatsDivisor(component: StatsComponent) -> Int {
+    ///   - Returns the number of sprites, as an `Int`.
+    private func numberOfSprites(component: StatsComponent) -> Int {
         switch component {
-        case .health:
-            return Constants.heartCapacity * Int(statsBar.isLifeForceActive ? 1.2 : 1)
+        case .life:
+            return Constants.totalHearts
+        case .mana:
+            return statsBar.maxMana / Constants.manaCapacity
+        }
+    }
+
+    /// Returns the capacity of each sprite for a given component.
+    /// - Parameter component: The `StatsComponent` to use.
+    /// - Returns:
+    ///   - Returns the capacity of each sprite, as an `Int`.
+    private func spriteCapacity(component: StatsComponent) -> Int {
+        switch component {
+        case .life:
+            return max(statsBar.maxLife, Constants.maxNonGoldLife) / 20
         case .mana:
             return Constants.manaCapacity
         }
@@ -64,26 +83,28 @@ struct StatsView: View {
     /// - Returns:
     ///   - The range for a given component, as an instance of `Range<Int>`.
     private func rangeForComponent(_ component: StatsComponent, half: RangeHalf? = nil) -> Range<Int> {
-        let divisor = adjustedStatsDivisor(component: component)
+        let nSprites = numberOfSprites(component: component)
+        guard nSprites > 0 else {
+            return 0 ..< 0
+        }
         switch component {
-        case .health:
-            let maxHealth = statsBar.maxHealth > Constants.maxNonGoldHealth ? Constants.maxNonGoldHealth : statsBar.maxHealth
+        case .life:
             switch half {
             case .beggining:
-                return 0 ..< Int(ceil(Double(maxHealth / divisor) / 2))
+                return 0 ..< Int(ceil(Double(nSprites) / 2))
             case .end:
-                return Int(ceil(Double(maxHealth / divisor) / 2)) ..< maxHealth / divisor
+                return Int(ceil(Double(nSprites) / 2)) ..< nSprites
             default:
-                return 0 ..< maxHealth / divisor
+                return 0 ..< nSprites
             }
         case .mana:
             switch half {
             case .beggining:
-                return 0 ..< Int(ceil(Double(statsBar.maxMana / divisor) / 2))
+                return 0 ..< Int(ceil(Double(nSprites) / 2))
             case .end:
-                return Int(ceil(Double(statsBar.maxMana / divisor) / 2)) ..< statsBar.maxMana / divisor
+                return Int(ceil(Double(nSprites) / 2)) ..< nSprites
             default:
-                return 0 ..< statsBar.maxMana / divisor
+                return 0 ..< nSprites
             }
         }
     }
@@ -97,9 +118,8 @@ struct StatsView: View {
     private func spriteTuples(component: StatsComponent, rangeHalf: RangeHalf? = nil) -> [(String, Int)] {
         var names = [(String, Int)]()
         switch component {
-        case .health:
-            let healthAboveMax = statsBar.maxHealth - Constants.maxNonGoldHealth
-            let goldenCount = healthAboveMax > 0 && healthAboveMax % 5 == 0 ? healthAboveMax / 5 : 0
+        case .life:
+            let goldenCount = goldenHeartCount()
             rangeForComponent(component, half: rangeHalf).forEach { names.append(($0 < goldenCount ? "heart2" : "heart", $0)) }
         case .mana:
             rangeForComponent(component, half: rangeHalf).forEach { names.append(("mana", $0)) }
@@ -119,11 +139,10 @@ struct StatsView: View {
     private func spritesRow(component: StatsComponent, current: Int, spriteTuples: [(String, Int)], spriteScaleMultiplier: CGFloat, maxSpriteLength: CGFloat) -> some View {
         HStack(spacing: 2) {
             ForEach(0 ..< spriteTuples.count, id: \.self) { index -> AnyView in
-                guard let image = NSImage(named: spriteTuples[index].0),
-                    let scaledImage = try? image.scaleEffect(spriteScaleMultiplier, maxLength: maxSpriteLength) else {
+                guard let image = NSImage(named: spriteTuples[index].0), let scaledImage = try? image.scaleEffect(spriteScaleMultiplier, maxLength: maxSpriteLength) else {
                         return AnyView(EmptyView())
                 }
-                let sprites = Double(current) / Double(self.adjustedStatsDivisor(component: component))
+                let sprites = Double(current) / Double(self.spriteCapacity(component: component))
                 let iDouble = Double(spriteTuples[index].1)
                 return AnyView(
                     Image(nsImage: scaledImage)
@@ -147,11 +166,11 @@ struct StatsView: View {
         switch axis {
         case .horizontal:
             switch component {
-            case .health:
+            case .life:
                 return AnyView(
                     spritesRow(
                         component: component,
-                        current: statsBar.currentHealth,
+                        current: statsBar.currentLife,
                         spriteTuples: spriteTuples(component: component),
                         spriteScaleMultiplier: 1,
                         maxSpriteLength: 22
@@ -170,19 +189,19 @@ struct StatsView: View {
             }
         case .vertical:
             switch component {
-            case .health:
+            case .life:
                 return AnyView(
                     VStack(alignment: .leading, spacing: 0) {
                         spritesRow(
                             component: component,
-                            current: statsBar.currentHealth,
+                            current: statsBar.currentLife,
                             spriteTuples: spriteTuples(component: component, rangeHalf: .beggining),
                             spriteScaleMultiplier: 0.5,
                             maxSpriteLength: 11
                         )
                         spritesRow(
                             component: component,
-                            current: statsBar.currentHealth,
+                            current: statsBar.currentLife,
                             spriteTuples: spriteTuples(component: component, rangeHalf: .end),
                             spriteScaleMultiplier: 0.5,
                             maxSpriteLength: 11
@@ -217,14 +236,14 @@ struct StatsView: View {
     ///   - A SwiftUI `View`.
     private func bodyView() -> some View {
         switch style.components {
-        case .health:
-            return AnyView(component(.health, axis: .horizontal))
+        case .life:
+            return AnyView(component(.life, axis: .horizontal))
         case .mana:
             return AnyView(component(.mana, axis: .horizontal))
         case .all:
             return AnyView(
                 HStack(alignment: .bottom) {
-                    component(.health, axis: .vertical)
+                    component(.life, axis: .vertical)
                     component(.mana, axis: .vertical)
                 }
             )
@@ -241,14 +260,14 @@ struct StatsView: View {
 
     /// The components which can be displayed inside a `StatsView`.
     enum ViewComponent: String {
-        case health
+        case life
         case mana
         case all
     }
 
     /// The individual components which can be displayed inside a `StatsView`.
     private enum StatsComponent {
-        case health
+        case life
         case mana
     }
 
@@ -264,8 +283,8 @@ struct StatsView: View {
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
         let statsBar = StatsBar(identifier: .statsBar)
-        statsBar.maxHealth = 380
-        statsBar.currentHealth = 380
+        statsBar.maxLife = 500
+        statsBar.currentLife = 400
         statsBar.maxMana = 180
         statsBar.currentMana = 180
         return StatsView(statsBar: statsBar, components: .all)

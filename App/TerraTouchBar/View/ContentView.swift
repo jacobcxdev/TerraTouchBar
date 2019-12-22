@@ -18,7 +18,7 @@ struct ContentView: View {
                 Text("Stats to display:")
                 Picker(selection: $statsViewComponentSelection, label: EmptyView()) {
                     Text("All").tag(StatsView.ViewComponent.all)
-                    Text("Health").tag(StatsView.ViewComponent.health)
+                    Text("Life").tag(StatsView.ViewComponent.life)
                     Text("Mana").tag(StatsView.ViewComponent.mana)
                 }
                 .scaledToFit()

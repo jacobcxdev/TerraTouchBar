@@ -20,20 +20,17 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// The `ObservedViewFrameHostingView<StatsView>` instance to display as the `view` property.
     var hostingView: ObservedViewFrameHostingView<StatsView>!
 
-    /// The maximum health for the Terraria player.
-    @Published var maxHealth = 0
+    /// The maximum life for the Terraria player.
+    @Published var maxLife = 0
 
-    /// The current health for the Terraria player.
-    @Published var currentHealth = 0
+    /// The current life for the Terraria player.
+    @Published var currentLife = 0
 
     /// The maximum mana for the Terraria player.
     @Published var maxMana = 0
 
     /// The current mana for the Terraria player.
     @Published var currentMana = 0
-
-    /// Whether the lifeforce buff is currently active on the Terraria player.
-    @Published var isLifeForceActive = false
 
     // MARK: - Init Methods
 
@@ -66,25 +63,21 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// Updates the stats properties of the `StatsBar` instance from a `JSON` object.
     /// - Parameter json: The `JSON` object to update with.
     func updateStats(from json: JSON) throws {
-        try? updateHealth(from: json["health"])
+        try? updateLife(from: json["life"])
         try? updateMana(from: json["mana"])
     }
 
-    /// Updates the `maxHealth` and `currentHealth` properties of the `StatsBar` instance from a `JSON` object.
+    /// Updates the `maxLife` and `currentLife` properties of the `StatsBar` instance from a `JSON` object.
     /// - Parameter json: The `JSON` object to update with.
-    func updateHealth(from json: JSON) throws {
+    func updateLife(from json: JSON) throws {
         guard let max = json["max"].int else {
             throw RuntimeError.error("Error decoding max")
         }
         guard let current = json["current"].int else {
             throw RuntimeError.error("Error decoding current")
         }
-        guard let lifeForceActive = json["lifeForceActive"].bool else {
-            throw RuntimeError.error("Error decoding lifeForceActive")
-        }
-        maxHealth = max
-        currentHealth = current
-        isLifeForceActive = lifeForceActive
+        maxLife = max
+        currentLife = current
     }
 
     /// Updates the `maxMana` and `currentMana` properties of the `StatsBar` instance from a `JSON` object.
