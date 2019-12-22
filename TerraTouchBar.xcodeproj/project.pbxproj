@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		160BD71223AD898700D2B9BF /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BD71123AD898700D2B9BF /* StatsView.swift */; };
+		160BD71423AD8B3C00D2B9BF /* StatsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BD71323AD8B3C00D2B9BF /* StatsBar.swift */; };
+		161CB32523AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CB32423AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift */; };
+		161CB32823AECD7C0010D3C4 /* ChannelInboundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CB32723AECD7C0010D3C4 /* ChannelInboundHandler.swift */; };
+		164A57B123AAC406000B68A1 /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A57B023AAC406000B68A1 /* TCPClient.swift */; };
+		164A57B523AAC4A7000B68A1 /* TCPClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A57B423AAC4A7000B68A1 /* TCPClientHandler.swift */; };
+		165057A623A47B2C00E6C910 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165057A523A47B2C00E6C910 /* NSImage.swift */; };
+		16693E8223A792BA00BF12E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16693E8123A792BA00BF12E7 /* ContentView.swift */; };
+		166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 166D4E6223A5A67500AEA5AD /* SwiftyJSON */; };
+		166D4E6523A5D4D000AEA5AD /* EscapeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */; };
+		166D4E6723A5D66B00AEA5AD /* KeySender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6623A5D66B00AEA5AD /* KeySender.swift */; };
+		166D4E6923A5DB3000AEA5AD /* EscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6823A5DB3000AEA5AD /* EscapeView.swift */; };
+		166D4E6B23A5E1AC00AEA5AD /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */; };
+		166D4E7223A659DC00AEA5AD /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */; };
+		167041F923AEB84A006DA3DA /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167041F823AEB84A006DA3DA /* Scale.swift */; };
+		168232B923AFB53E0048C8EF /* StatsViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168232B823AFB53E0048C8EF /* StatsViewStyle.swift */; };
+		168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 168232BB23AFDB600048C8EF /* TinyConstraints */; };
+		168232C123AFE6F70048C8EF /* ObservedViewFrameHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */; };
+		1687014C23A6BDAF00C6BC40 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687014B23A6BDAF00C6BC40 /* Texture.swift */; };
+		16A131F823A664AA00212D3C /* KeyPressBridge.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */; };
+		16A131FA23A664D700212D3C /* KeyPressBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A131F923A664D700212D3C /* KeyPressBridge.swift */; };
+		16AD4AC423A447C700F350CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4AC323A447C700F350CA /* AppDelegate.swift */; };
+		16AD4AC823A447C700F350CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD4AC723A447C700F350CA /* Assets.xcassets */; };
+		16AD4ACB23A447C700F350CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AD4AC923A447C700F350CA /* Main.storyboard */; };
+		16AD4AD423A447DB00F350CA /* AppEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4AD323A447DB00F350CA /* AppEventManager.swift */; };
+		16AD4ADA23A4537800F350CA /* TouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4AD923A4537800F350CA /* TouchBarController.swift */; };
+		16AD4ADC23A458B400F350CA /* InventoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4ADB23A458B400F350CA /* InventoryBar.swift */; };
+		16AD4AE023A459E200F350CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4ADF23A459E200F350CA /* Item.swift */; };
+		16BCA02223A51502002208F4 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA02123A51502002208F4 /* InventoryView.swift */; };
+		16BCA02923A51F51002208F4 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BCA02823A51F51002208F4 /* DFRFoundation.framework */; };
+		16BCA02A23A51F51002208F4 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16BCA02823A51F51002208F4 /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16BCA03923A54C78002208F4 /* TCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA03823A54C78002208F4 /* TCPServer.swift */; };
+		16BCA03B23A54D07002208F4 /* TCPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA03A23A54D07002208F4 /* TCPServerHandler.swift */; };
+		16BCA03E23A56530002208F4 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 16BCA03D23A56530002208F4 /* NIO */; };
+		16C253CC23A8135200C9E8C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253CB23A8135200C9E8C8 /* Constants.swift */; };
+		16C253CE23A82D1000C9E8C8 /* NSImageCycler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253CD23A82D1000C9E8C8 /* NSImageCycler.swift */; };
+		16C253D023A82D3800C9E8C8 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253CF23A82D3800C9E8C8 /* AnimatedImageView.swift */; };
+		16C253D223A82DB800C9E8C8 /* ObservableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D123A82DB800C9E8C8 /* ObservableTimer.swift */; };
+		16C253D423A82DDC00C9E8C8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D323A82DDC00C9E8C8 /* ItemView.swift */; };
+		16C253D723A834FA00C9E8C8 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D623A834FA00C9E8C8 /* RuntimeError.swift */; };
+		16C253D923A83C5000C9E8C8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 16C253D823A83C5000C9E8C8 /* .swiftlint.yml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16BCA02B23A51F51002208F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				16BCA02A23A51F51002208F4 /* DFRFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		160BD71123AD898700D2B9BF /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		160BD71323AD8B3C00D2B9BF /* StatsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBar.swift; sourceTree = "<group>"; };
+		161CB32423AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchBarItem.Identifier.swift; sourceTree = "<group>"; };
+		161CB32723AECD7C0010D3C4 /* ChannelInboundHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInboundHandler.swift; sourceTree = "<group>"; };
+		164A57B023AAC406000B68A1 /* TCPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
+		164A57B423AAC4A7000B68A1 /* TCPClientHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClientHandler.swift; sourceTree = "<group>"; };
+		165057A523A47B2C00E6C910 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		16693E8123A792BA00BF12E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeButton.swift; sourceTree = "<group>"; };
+		166D4E6623A5D66B00AEA5AD /* KeySender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySender.swift; sourceTree = "<group>"; };
+		166D4E6823A5DB3000AEA5AD /* EscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeView.swift; sourceTree = "<group>"; };
+		166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCode.swift; sourceTree = "<group>"; };
+		166D4E6D23A5F3C800AEA5AD /* NSTouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTouchBar.h; sourceTree = "<group>"; };
+		166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = KeyPressBridge.applescript; sourceTree = "<group>"; };
+		167041F823AEB84A006DA3DA /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		168232B823AFB53E0048C8EF /* StatsViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewStyle.swift; sourceTree = "<group>"; };
+		168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedViewFrameHostingView.swift; sourceTree = "<group>"; };
+		1687014B23A6BDAF00C6BC40 /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		16A131F923A664D700212D3C /* KeyPressBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPressBridge.swift; sourceTree = "<group>"; };
+		16AD4AC023A447C700F350CA /* TerraTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16AD4AC323A447C700F350CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16AD4AC723A447C700F350CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16AD4ACA23A447C700F350CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16AD4ACC23A447C700F350CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16AD4ACD23A447C700F350CA /* TerraTouchbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TerraTouchbar.entitlements; sourceTree = "<group>"; };
+		16AD4AD323A447DB00F350CA /* AppEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventManager.swift; sourceTree = "<group>"; };
+		16AD4AD723A44E2600F350CA /* TerraTouchBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TerraTouchBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		16AD4AD923A4537800F350CA /* TouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarController.swift; sourceTree = "<group>"; };
+		16AD4ADB23A458B400F350CA /* InventoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryBar.swift; sourceTree = "<group>"; };
+		16AD4ADF23A459E200F350CA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		16BCA02123A51502002208F4 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		16BCA02423A51F26002208F4 /* DFRFoundation */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = DFRFoundation; path = ../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation; sourceTree = "<group>"; };
+		16BCA02823A51F51002208F4 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
+		16BCA03823A54C78002208F4 /* TCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPServer.swift; sourceTree = "<group>"; };
+		16BCA03A23A54D07002208F4 /* TCPServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPServerHandler.swift; sourceTree = "<group>"; };
+		16C253CB23A8135200C9E8C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		16C253CD23A82D1000C9E8C8 /* NSImageCycler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageCycler.swift; sourceTree = "<group>"; };
+		16C253CF23A82D3800C9E8C8 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		16C253D123A82DB800C9E8C8 /* ObservableTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTimer.swift; sourceTree = "<group>"; };
+		16C253D323A82DDC00C9E8C8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		16C253D623A834FA00C9E8C8 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		16C253D823A83C5000C9E8C8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16AD4ABD23A447C700F350CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */,
+				16BCA02923A51F51002208F4 /* DFRFoundation.framework in Frameworks */,
+				168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */,
+				166D4E7223A659DC00AEA5AD /* AppleScriptObjC.framework in Frameworks */,
+				16BCA03E23A56530002208F4 /* NIO in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		160BD71B23AE4EDF00D2B9BF /* TouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				16AD4AD923A4537800F350CA /* TouchBarController.swift */,
+				166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */,
+				16AD4ADB23A458B400F350CA /* InventoryBar.swift */,
+				160BD71323AD8B3C00D2B9BF /* StatsBar.swift */,
+			);
+			path = TouchBar;
+			sourceTree = "<group>";
+		};
+		160BD71C23AE4F5A00D2B9BF /* TouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				166D4E6823A5DB3000AEA5AD /* EscapeView.swift */,
+				16BCA02123A51502002208F4 /* InventoryView.swift */,
+				160BD71123AD898700D2B9BF /* StatsView.swift */,
+			);
+			path = TouchBar;
+			sourceTree = "<group>";
+		};
+		160BD71D23AE4FE200D2B9BF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				16C253CF23A82D3800C9E8C8 /* AnimatedImageView.swift */,
+				16C253D323A82DDC00C9E8C8 /* ItemView.swift */,
+				168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		161CB32923AECD8E0010D3C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				165057A523A47B2C00E6C910 /* NSImage.swift */,
+				161CB32723AECD7C0010D3C4 /* ChannelInboundHandler.swift */,
+				161CB32423AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		161CB32A23AED3310010D3C4 /* ObservableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				16C253D123A82DB800C9E8C8 /* ObservableTimer.swift */,
+				16C253CD23A82D1000C9E8C8 /* NSImageCycler.swift */,
+				167041F823AEB84A006DA3DA /* Scale.swift */,
+				168232B823AFB53E0048C8EF /* StatsViewStyle.swift */,
+			);
+			path = ObservableObjects;
+			sourceTree = "<group>";
+		};
+		166D4E6C23A5F38400AEA5AD /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				167041F723AE7DBE006DA3DA /* Key */,
+				16AD4AD723A44E2600F350CA /* TerraTouchBar-Bridging-Header.h */,
+				166D4E6D23A5F3C800AEA5AD /* NSTouchBar.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		167041F323AE520A006DA3DA /* TCP */ = {
+			isa = PBXGroup;
+			children = (
+				167041F423AE5217006DA3DA /* Server */,
+				167041F523AE521E006DA3DA /* Client */,
+			);
+			path = TCP;
+			sourceTree = "<group>";
+		};
+		167041F423AE5217006DA3DA /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				16BCA03823A54C78002208F4 /* TCPServer.swift */,
+				16BCA03A23A54D07002208F4 /* TCPServerHandler.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		167041F523AE521E006DA3DA /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				164A57B023AAC406000B68A1 /* TCPClient.swift */,
+				164A57B423AAC4A7000B68A1 /* TCPClientHandler.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		167041F623AE5291006DA3DA /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				166D4E6623A5D66B00AEA5AD /* KeySender.swift */,
+				166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		167041F723AE7DBE006DA3DA /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				16A131F923A664D700212D3C /* KeyPressBridge.swift */,
+				166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		16AD4AB723A447C700F350CA = {
+			isa = PBXGroup;
+			children = (
+				16C253D823A83C5000C9E8C8 /* .swiftlint.yml */,
+				16AD4AC223A447C700F350CA /* TerraTouchBar */,
+				16AD4AC123A447C700F350CA /* Products */,
+				16BCA02323A51F26002208F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		16AD4AC123A447C700F350CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16AD4AC023A447C700F350CA /* TerraTouchBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16AD4AC223A447C700F350CA /* TerraTouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				16AD4AC323A447C700F350CA /* AppDelegate.swift */,
+				16AD4AE523A45DFF00F350CA /* Model */,
+				16AD4AE623A45E0D00F350CA /* View */,
+				16AD4AE723A45E1100F350CA /* Controller */,
+				16AD4AE823A45E5200F350CA /* Utilities */,
+				166D4E6C23A5F38400AEA5AD /* Bridging */,
+				16AD4AC723A447C700F350CA /* Assets.xcassets */,
+				16AD4AC923A447C700F350CA /* Main.storyboard */,
+				16AD4ACC23A447C700F350CA /* Info.plist */,
+				16AD4ACD23A447C700F350CA /* TerraTouchbar.entitlements */,
+			);
+			path = TerraTouchBar;
+			sourceTree = "<group>";
+		};
+		16AD4AE523A45DFF00F350CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16AD4ADF23A459E200F350CA /* Item.swift */,
+				1687014B23A6BDAF00C6BC40 /* Texture.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16AD4AE623A45E0D00F350CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16693E8123A792BA00BF12E7 /* ContentView.swift */,
+				160BD71C23AE4F5A00D2B9BF /* TouchBar */,
+				160BD71D23AE4FE200D2B9BF /* Utility */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16AD4AE723A45E1100F350CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16AD4AD323A447DB00F350CA /* AppEventManager.swift */,
+				160BD71B23AE4EDF00D2B9BF /* TouchBar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16AD4AE823A45E5200F350CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				161CB32A23AED3310010D3C4 /* ObservableObjects */,
+				167041F323AE520A006DA3DA /* TCP */,
+				167041F623AE5291006DA3DA /* Key */,
+				161CB32923AECD8E0010D3C4 /* Extensions */,
+				16C253CB23A8135200C9E8C8 /* Constants.swift */,
+				16C253D623A834FA00C9E8C8 /* RuntimeError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		16BCA02323A51F26002208F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */,
+				16BCA02823A51F51002208F4 /* DFRFoundation.framework */,
+				16BCA02423A51F26002208F4 /* DFRFoundation */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16AD4ABF23A447C700F350CA /* TerraTouchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16AD4AD023A447C700F350CA /* Build configuration list for PBXNativeTarget "TerraTouchBar" */;
+			buildPhases = (
+				16AD4ABC23A447C700F350CA /* Sources */,
+				16AD4ABD23A447C700F350CA /* Frameworks */,
+				16AD4ABE23A447C700F350CA /* Resources */,
+				16BCA02B23A51F51002208F4 /* Embed Frameworks */,
+				16C253D523A8322C00C9E8C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerraTouchBar;
+			packageProductDependencies = (
+				16BCA03D23A56530002208F4 /* NIO */,
+				166D4E6223A5A67500AEA5AD /* SwiftyJSON */,
+				168232BB23AFDB600048C8EF /* TinyConstraints */,
+			);
+			productName = TerraTouchbar;
+			productReference = 16AD4AC023A447C700F350CA /* TerraTouchBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16AD4AB823A447C700F350CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = JacobCXDev;
+				TargetAttributes = {
+					16AD4ABF23A447C700F350CA = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 16AD4ABB23A447C700F350CA /* Build configuration list for PBXProject "TerraTouchBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16AD4AB723A447C700F350CA;
+			packageReferences = (
+				16BCA03C23A56530002208F4 /* XCRemoteSwiftPackageReference "swift-nio" */,
+				166D4E6123A5A67500AEA5AD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				168232BA23AFDB600048C8EF /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
+			productRefGroup = 16AD4AC123A447C700F350CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16AD4ABF23A447C700F350CA /* TerraTouchBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16AD4ABE23A447C700F350CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C253D923A83C5000C9E8C8 /* .swiftlint.yml in Resources */,
+				16AD4AC823A447C700F350CA /* Assets.xcassets in Resources */,
+				16AD4ACB23A447C700F350CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16C253D523A8322C00C9E8C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16AD4ABC23A447C700F350CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165057A623A47B2C00E6C910 /* NSImage.swift in Sources */,
+				16BCA02223A51502002208F4 /* InventoryView.swift in Sources */,
+				16BCA03B23A54D07002208F4 /* TCPServerHandler.swift in Sources */,
+				168232C123AFE6F70048C8EF /* ObservedViewFrameHostingView.swift in Sources */,
+				160BD71223AD898700D2B9BF /* StatsView.swift in Sources */,
+				16C253D723A834FA00C9E8C8 /* RuntimeError.swift in Sources */,
+				16A131F823A664AA00212D3C /* KeyPressBridge.applescript in Sources */,
+				16C253CC23A8135200C9E8C8 /* Constants.swift in Sources */,
+				16AD4ADC23A458B400F350CA /* InventoryBar.swift in Sources */,
+				16AD4AD423A447DB00F350CA /* AppEventManager.swift in Sources */,
+				166D4E6B23A5E1AC00AEA5AD /* KeyCode.swift in Sources */,
+				168232B923AFB53E0048C8EF /* StatsViewStyle.swift in Sources */,
+				16AD4AE023A459E200F350CA /* Item.swift in Sources */,
+				16A131FA23A664D700212D3C /* KeyPressBridge.swift in Sources */,
+				166D4E6923A5DB3000AEA5AD /* EscapeView.swift in Sources */,
+				16693E8223A792BA00BF12E7 /* ContentView.swift in Sources */,
+				164A57B523AAC4A7000B68A1 /* TCPClientHandler.swift in Sources */,
+				166D4E6523A5D4D000AEA5AD /* EscapeButton.swift in Sources */,
+				16AD4AC423A447C700F350CA /* AppDelegate.swift in Sources */,
+				166D4E6723A5D66B00AEA5AD /* KeySender.swift in Sources */,
+				161CB32523AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift in Sources */,
+				161CB32823AECD7C0010D3C4 /* ChannelInboundHandler.swift in Sources */,
+				160BD71423AD8B3C00D2B9BF /* StatsBar.swift in Sources */,
+				16C253D023A82D3800C9E8C8 /* AnimatedImageView.swift in Sources */,
+				16C253D223A82DB800C9E8C8 /* ObservableTimer.swift in Sources */,
+				16C253D423A82DDC00C9E8C8 /* ItemView.swift in Sources */,
+				16C253CE23A82D1000C9E8C8 /* NSImageCycler.swift in Sources */,
+				16BCA03923A54C78002208F4 /* TCPServer.swift in Sources */,
+				1687014C23A6BDAF00C6BC40 /* Texture.swift in Sources */,
+				164A57B123AAC406000B68A1 /* TCPClient.swift in Sources */,
+				167041F923AEB84A006DA3DA /* Scale.swift in Sources */,
+				16AD4ADA23A4537800F350CA /* TouchBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		16AD4AC923A447C700F350CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16AD4ACA23A447C700F350CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16AD4ACE23A447C700F350CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16AD4ACF23A447C700F350CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		16AD4AD123A447C700F350CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TerraTouchbar/TerraTouchbar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9489Q3YVAN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TerraTouchbar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/DFRFoundation.framework/Versions/A",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobcxdev.TerraTouchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TerraTouchBar/Bridging/TerraTouchBar-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Debug;
+		};
+		16AD4AD223A447C700F350CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TerraTouchbar/TerraTouchbar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9489Q3YVAN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TerraTouchbar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/DFRFoundation.framework/Versions/A",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobcxdev.TerraTouchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TerraTouchBar/Bridging/TerraTouchBar-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16AD4ABB23A447C700F350CA /* Build configuration list for PBXProject "TerraTouchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16AD4ACE23A447C700F350CA /* Debug */,
+				16AD4ACF23A447C700F350CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16AD4AD023A447C700F350CA /* Build configuration list for PBXNativeTarget "TerraTouchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16AD4AD123A447C700F350CA /* Debug */,
+				16AD4AD223A447C700F350CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		166D4E6123A5A67500AEA5AD /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		168232BA23AFDB600048C8EF /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+		16BCA03C23A56530002208F4 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		166D4E6223A5A67500AEA5AD /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 166D4E6123A5A67500AEA5AD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		168232BB23AFDB600048C8EF /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168232BA23AFDB600048C8EF /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+		16BCA03D23A56530002208F4 /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16BCA03C23A56530002208F4 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 16AD4AB823A447C700F350CA /* Project object */;
+}
