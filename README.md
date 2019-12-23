@@ -8,7 +8,7 @@ To create the memory leaks (for debugging):
 1) Launch the Xcode project
 2) Build and run
 3) Spam the `Send mockup update` button
-4) Keep an eye on the speed of the *soul of flight*, in inventory slot 7.
+4) Keep an eye on the speed of the *soul of flight*, in inventory slot 8.
 5) When it seems to have slowed down enough, switch back to Xcode and begin debugging!
 
 Any feedback would be greatly appreciated.
