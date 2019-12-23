@@ -34,7 +34,7 @@ struct ContentView: View {
                     let client = TCPClient(
                         host: Constants.serverAddress,
                         port: Constants.serverPort,
-                        handler: TCPClientHandler(message: Int.random(in: 0 ... 1) == 0 ? .mockupUpdate1 : .mockupUpdate2)
+                        handler: TCPClientHandler(message: .mockupUpdate)
                     )
                     do {
                         try client.run()

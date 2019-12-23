@@ -16,16 +16,16 @@ struct Constants {
     static let tps: Double = 1 / 60
 
     /// The total possible number of hearts.
-    static let totalHearts = 20
+    static let totalHearts: Double = 20
 
     /// The total life held by one heart.
-    static let heartCapacity = 20
+    static let heartCapacity: Double = 20
 
     /// The total mana held by one mana star.
-    static let manaCapacity = 20
+    static let manaCapacity: Double = 20
 
     /// The maximum life a Terraria player can hold without consuming any life fruit.
-    static let maxNonGoldLife = 400
+    static let maxNonGoldLife: Double = 400
 
     // MARK: - TCP
 

@@ -21,16 +21,16 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     var hostingView: ObservedViewFrameHostingView<StatsView>!
 
     /// The maximum life for the Terraria player.
-    @Published var maxLife = 0
+    @Published var maxLife: Double = 0
 
     /// The current life for the Terraria player.
-    @Published var currentLife = 0
+    @Published var currentLife: Double = 0
 
     /// The maximum mana for the Terraria player.
-    @Published var maxMana = 0
+    @Published var maxMana: Double = 0
 
     /// The current mana for the Terraria player.
-    @Published var currentMana = 0
+    @Published var currentMana: Double = 0
 
     // MARK: - Init Methods
 
@@ -70,10 +70,10 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// Updates the `maxLife` and `currentLife` properties of the `StatsBar` instance from a `JSON` object.
     /// - Parameter json: The `JSON` object to update with.
     func updateLife(from json: JSON) throws {
-        guard let max = json["max"].int else {
+        guard let max = json["max"].double else {
             throw RuntimeError.error("Error decoding max")
         }
-        guard let current = json["current"].int else {
+        guard let current = json["current"].double else {
             throw RuntimeError.error("Error decoding current")
         }
         maxLife = max
@@ -83,10 +83,10 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// Updates the `maxMana` and `currentMana` properties of the `StatsBar` instance from a `JSON` object.
     /// - Parameter json: The `JSON` object to update with.
     func updateMana(from json: JSON) throws {
-        guard let max = json["max"].int else {
+        guard let max = json["max"].double else {
             throw RuntimeError.error("Error decoding max")
         }
-        guard let current = json["current"].int else {
+        guard let current = json["current"].double else {
             throw RuntimeError.error("Error decoding current")
         }
         maxMana = max

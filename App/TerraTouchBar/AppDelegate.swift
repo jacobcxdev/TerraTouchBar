@@ -12,11 +12,21 @@ import AppleScriptObjC
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    // MARK: - Properties
 
+    /// The main `NSWindow` of the application.
     var window: NSWindow!
+
+    /// The `AppEventManager` instance which manages events for the application.
     let eventManager = AppEventManager()
+
+    /// The `TouchBarController` instance which controls the touch bar.
     let touchBarController = TouchBarController()
+
+    /// The `KeyPressBridge` instance which employs a method to send a key press from a given key code.
     var keyPressBridge: KeyPressBridge?
+
+    // MARK: - Init Methods
 
     override init() {
         // MARK: Load AppleScript KeyPressBridge
@@ -29,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         super.init()
     }
 
+    // MARK: - Instance Methods
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // MARK: Setup ContentView
 
@@ -37,7 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
+            backing: .buffered, defer: false
+        )
         window.center()
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
@@ -78,6 +91,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.global().async {
             self.checkAccessibility()
         }
+    }
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
     }
 
     /// Checks the Accessibility settings.

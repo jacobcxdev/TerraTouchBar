@@ -8,8 +8,8 @@
 
 import Foundation
 
-@objc(NSObject)
 /// A protocol which employs a method to send a key press from a given key code.
+@objc(NSObject)
 protocol KeyPressBridge {
     /// Sends a key press from a given key code.
     /// - Parameter keyCode: The key code, in the form of an `NSNumber`, of the key to press.
