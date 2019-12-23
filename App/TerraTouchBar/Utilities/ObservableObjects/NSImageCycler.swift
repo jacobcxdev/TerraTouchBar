@@ -34,7 +34,10 @@ class NSImageCycler: ObservableObject {
     ///   - delay: The `TimeInterval` of the delay between displaying each `NSImage`.
     init(images: [NSImage], delay: TimeInterval) {
         self.images = images
-        timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: true) { [weak self] _ in
+            guard let self = self else {
+                return
+            }
             if self.index < images.count - 1 {
                 self.index += 1
             } else {

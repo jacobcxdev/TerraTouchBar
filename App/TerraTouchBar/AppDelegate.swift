@@ -83,8 +83,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 try client.run()
             } catch {
                 print(error)
-                client.shutdown()
             }
+            client.shutdown()
         }
 
         // MARK: Check Accessibility

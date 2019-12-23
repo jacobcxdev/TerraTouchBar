@@ -75,8 +75,8 @@ struct InventoryView: View, KeyPress {
                 try client.run()
             } catch {
                 print(error)
-                client.shutdown()
             }
+            client.shutdown()
         }
     }
 }

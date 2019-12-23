@@ -22,8 +22,8 @@ class ObservableTimer: ObservableObject {
     ///   - withTimeInterval: The `TimeInterval` between each published change.
     ///   - repeats: Whether the timer should repeat.
     init(withTimeInterval: TimeInterval, repeats: Bool) {
-        timer = Timer.scheduledTimer(withTimeInterval: withTimeInterval, repeats: repeats) { _ in
-            self.objectWillChange.send()
+        timer = Timer.scheduledTimer(withTimeInterval: withTimeInterval, repeats: repeats) { [weak self] _ in
+            self?.objectWillChange.send()
         }
     }
 }
