@@ -12,3 +12,6 @@ To create the memory leaks (for debugging):
 5) When it seems to have slowed down enough, switch back to Xcode and begin debugging!
 
 Any feedback would be greatly appreciated.
+
+## Mockup
+![Mockup](https://github.com/jacobcxdev/TerraTouchBar/blob/master/Mockup.png?raw=true)
