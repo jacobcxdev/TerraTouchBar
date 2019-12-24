@@ -25,37 +25,38 @@ struct ItemView: View {
     var timer = ObservableTimer(withTimeInterval: 0.5, repeats: true)
 
     var body: some View {
-        ZStack(alignment: Alignment.bottomLeading) {
-            ZStack {
-                Image(item.isSelected ? "inventory2" : "inventory")
-                    .opacity(index < 10 ? 1 : 0.5)
-                textureImage(scale: Scale(multiplier: 0.5, maxLength: 20))
-                    .scaleEffect(item.texture.pulsates ? self.texturePulseScale : 1)
-                    .animation(.easeInOut(duration: 0.5))
-                    .onReceive(timer.objectWillChange) { _ in
-                        self.texturePulseScale = self.texturePulseScale > 1 ? 0.8 : 1.2
+        ZStack(alignment: .topLeading) {
+            ZStack(alignment: .bottomLeading) {
+                ZStack {
+                    Image(item.isSelected ? "inventory2" : "inventory")
+                        .opacity(index < 10 ? 1 : 0.5)
+                    textureImage(scale: Scale(multiplier: 0.5, maxLength: 20))
+                        .scaleEffect(item.texture.pulsates ? self.texturePulseScale : 1)
+                        .animation(.easeInOut(duration: 0.5))
+                        .onReceive(timer.objectWillChange) { _ in
+                            self.texturePulseScale = self.texturePulseScale > 1 ? 0.8 : 1.2
+                    }
+                }
+                if item.stack > 1 {
+                    andyText("\(item.stack)")
+                        .padding(.leading, 4)
+                        .padding(.bottom, 4)
                 }
             }
-            if item.stack > 1 {
-                Text("\(item.stack)")
-                    .font(.custom("andy", size: 8))
-                    .scaleEffect(item.isSelected ? 1.1 : 1)
-                    .shadow(color: .black, radius: 1)
-                    .shadow(color: .black, radius: 1)
+            if index < 10 {
+                andyText("\(index < 9 ? index + 1 : 0)")
                     .padding(.leading, 4)
-                    .padding(.bottom, 4)
+                    .padding(.top, 4)
             }
         }
-        .overlay(
-            { () -> AnyView in
-                if !item.canUseItem {
-                    return AnyView(Image("cooldown"))
-                }
-                return AnyView(EmptyView())
-            }()
-        )
-            .scaleEffect(item.isSelected ? 1.1 : 1)
-            .animation(.spring(response: 0.2, dampingFraction: 0.825, blendDuration: 0))
+        .overlay({ () -> AnyView? in
+            if !item.canUseItem {
+                return AnyView(Image("cooldown"))
+            }
+            return nil
+        }())
+        .scaleEffect(item.isSelected ? 1.1 : 1)
+        .animation(.spring(response: 0.2, dampingFraction: 0.825, blendDuration: 0))
     }
 
     // MARK: - Init Methods
@@ -99,5 +100,17 @@ struct ItemView: View {
             print(error)
         }
         return AnyView(EmptyView())
+    }
+
+    /// Returns a SwiftUI `Text` view, styled with the `andy` font.
+    /// - Parameter text: The string to be displayed inside the `Text` view.
+    /// - Returns:
+    ///   - A SwiftUI `View`.
+    private func andyText(_ text: String) -> some View {
+        return Text(text)
+            .font(.custom("andy", size: 8))
+            .scaleEffect(item.isSelected ? 1.1 : 1)
+            .shadow(color: .black, radius: 1)
+            .shadow(color: .black, radius: 1)
     }
 }
