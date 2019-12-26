@@ -595,6 +595,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/DFRFoundation.framework/Versions/A",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacobcxdev.TerraTouchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TerraTouchBar/Bridging/TerraTouchBar-Bridging-Header.h";
@@ -625,6 +626,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/DFRFoundation.framework/Versions/A",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacobcxdev.TerraTouchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TerraTouchBar/Bridging/TerraTouchBar-Bridging-Header.h";
