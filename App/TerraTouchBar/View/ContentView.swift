@@ -29,7 +29,7 @@ struct ContentView: View {
                 self.touchBarController.statsBar.setStatsViewComponents(components: output)
             }
             Divider()
-            Button("Send mockup update") {
+            Button("Preview") {
                 DispatchQueue.global().async {
                     let client = TCPClient(
                         host: Constants.serverAddress,

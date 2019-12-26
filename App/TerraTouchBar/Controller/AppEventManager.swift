@@ -51,7 +51,7 @@ class AppEventManager {
         for app in activeApps where app.isActive {
             if app.bundleIdentifier == Bundle.main.bundleIdentifier {
                 touchBarController.showTouchBar()
-            } else if (app.executableURL?.absoluteString ?? "").contains("/mono") {
+            } else if app.bundleIdentifier == "org.Terraria" || (app.executableURL?.absoluteString ?? "").contains("/mono") {
                 touchBarController.showTouchBar()
             } else {
                 touchBarController.hideTouchBar()
