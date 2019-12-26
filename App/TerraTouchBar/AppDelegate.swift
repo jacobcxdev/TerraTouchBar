@@ -86,24 +86,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             client.shutdown()
         }
-
-        // MARK: Check Accessibility
-        DispatchQueue.global().async {
-            self.checkAccessibility()
-        }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         true
     }
-
-    /// Checks the Accessibility settings.
-    @discardableResult
-    private func checkAccessibility() -> Bool {
-        let checkOptPrompt = kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString
-        let options = [checkOptPrompt: true]
-        let accessEnabled = AXIsProcessTrustedWithOptions(options as CFDictionary?)
-        return accessEnabled
-    }
-
 }
