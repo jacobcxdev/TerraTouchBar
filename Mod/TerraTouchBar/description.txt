@@ -1,0 +1,1 @@
+TerraTouchBar adds Touch Bar functionality to Terraria for supported MacBook Pros. It requires that you download the TerraTouchBar application from https://github.com/jacobcxdev/TerraTouchBar/releases.
