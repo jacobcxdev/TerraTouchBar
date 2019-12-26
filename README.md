@@ -5,7 +5,7 @@ A tModLoader Terraria mod to add Touch Bar functionality to Terraria for support
 1) Purchase and install [Terraria](https://terraria.org/) and [tModLoader](https://github.com/tModLoader/tModLoader).
 2) Download and extract `TerraTouchBar.app.zip` from the [releases](https://github.com/jacobcxdev/TerraTouchBar/releases) page.
 3) Copy the extracted application to your desired location (e.g: `/Applications`).
-4) Either download `TerraTouchBar` from tModLoader's Mod Browser, or download and extract `TerraTouchBar.tmod` from the [releases](https://github.com/jacobcxdev/TerraTouchBar/releases) page and copy it to `~/Library/Application Support/Terraria/ModLoader/Mods`.
+4) Either download `TerraTouchBar` from tModLoader's Mod Browser, or download `TerraTouchBar.tmod` from the [releases](https://github.com/jacobcxdev/TerraTouchBar/releases) page and copy it to `~/Library/Application Support/Terraria/ModLoader/Mods`.
 
 ## Usage
 Simply launch Terraria and the TerraTouchBar application. The mod and the application will communicate automatically.
