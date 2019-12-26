@@ -2,4 +2,4 @@ displayName = TerraTouchBar
 author = JacobCXDev
 version = 0.1
 homepage = https://github.com/jacobcxdev/TerraTouchBar
-includePDB = true
+includeSource = true
