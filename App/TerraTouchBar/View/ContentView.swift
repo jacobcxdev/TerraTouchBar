@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var touchBarController: TouchBarController
-    @State private var statsViewComponentSelection: StatsView.ViewComponent = .all
+    @State var statsViewComponentSelection: StatsView.ViewComponent = .all
 
     var body: some View {
         VStack {

@@ -48,8 +48,12 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
 
     /// Performs setup operations on the `StatsBar` instance.
     private func setup() {
+        var components: StatsView.ViewComponent = .all
+        if let svcString = UserDefaults.standard.string(forKey: Constants.svcKey), let svc = StatsView.ViewComponent(rawValue: svcString) {
+            components = svc
+        }
         visibilityPriority = .high
-        hostingView = ObservedViewFrameHostingView(rootView: StatsView(statsBar: self, components: .all))
+        hostingView = ObservedViewFrameHostingView(rootView: StatsView(statsBar: self, components: components))
         hostingView.delegate = self
         view = hostingView
     }
@@ -58,6 +62,7 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// - Parameter components: The components to display.
     func setStatsViewComponents(components: StatsView.ViewComponent) {
         hostingView.rootView.style.components = components
+        UserDefaults.standard.set(components.rawValue, forKey: Constants.svcKey)
     }
 
     /// Updates the stats properties of the `StatsBar` instance from a `JSON` object.

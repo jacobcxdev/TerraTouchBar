@@ -40,4 +40,9 @@ struct Constants {
 
     /// The port for the TerraTouchBar app client.
     static let clientPort = 1718
+
+    // MARK: - UserDefaults
+
+    /// The key for the saved `StatsView.ViewComponent` value.
+    static let svcKey = "statsViewComponents"
 }
