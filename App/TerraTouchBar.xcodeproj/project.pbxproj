@@ -17,17 +17,12 @@
 		16693E8223A792BA00BF12E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16693E8123A792BA00BF12E7 /* ContentView.swift */; };
 		166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 166D4E6223A5A67500AEA5AD /* SwiftyJSON */; };
 		166D4E6523A5D4D000AEA5AD /* EscapeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */; };
-		166D4E6723A5D66B00AEA5AD /* KeySender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6623A5D66B00AEA5AD /* KeySender.swift */; };
 		166D4E6923A5DB3000AEA5AD /* EscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6823A5DB3000AEA5AD /* EscapeView.swift */; };
-		166D4E6B23A5E1AC00AEA5AD /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */; };
-		166D4E7223A659DC00AEA5AD /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */; };
 		167041F923AEB84A006DA3DA /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167041F823AEB84A006DA3DA /* Scale.swift */; };
 		168232B923AFB53E0048C8EF /* StatsViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168232B823AFB53E0048C8EF /* StatsViewStyle.swift */; };
 		168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 168232BB23AFDB600048C8EF /* TinyConstraints */; };
 		168232C123AFE6F70048C8EF /* ObservedViewFrameHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */; };
 		1687014C23A6BDAF00C6BC40 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687014B23A6BDAF00C6BC40 /* Texture.swift */; };
-		16A131F823A664AA00212D3C /* KeyPressBridge.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */; };
-		16A131FA23A664D700212D3C /* KeyPressBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A131F923A664D700212D3C /* KeyPressBridge.swift */; };
 		16AD4AC423A447C700F350CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD4AC323A447C700F350CA /* AppDelegate.swift */; };
 		16AD4AC823A447C700F350CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD4AC723A447C700F350CA /* Assets.xcassets */; };
 		16AD4ACB23A447C700F350CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AD4AC923A447C700F350CA /* Main.storyboard */; };
@@ -71,17 +66,13 @@
 		165057A523A47B2C00E6C910 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 		16693E8123A792BA00BF12E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeButton.swift; sourceTree = "<group>"; };
-		166D4E6623A5D66B00AEA5AD /* KeySender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySender.swift; sourceTree = "<group>"; };
 		166D4E6823A5DB3000AEA5AD /* EscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeView.swift; sourceTree = "<group>"; };
-		166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCode.swift; sourceTree = "<group>"; };
 		166D4E6D23A5F3C800AEA5AD /* NSTouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTouchBar.h; sourceTree = "<group>"; };
 		166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
-		166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = KeyPressBridge.applescript; sourceTree = "<group>"; };
 		167041F823AEB84A006DA3DA /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		168232B823AFB53E0048C8EF /* StatsViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewStyle.swift; sourceTree = "<group>"; };
 		168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedViewFrameHostingView.swift; sourceTree = "<group>"; };
 		1687014B23A6BDAF00C6BC40 /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
-		16A131F923A664D700212D3C /* KeyPressBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPressBridge.swift; sourceTree = "<group>"; };
 		16AD4AC023A447C700F350CA /* TerraTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AD4AC323A447C700F350CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AD4AC723A447C700F350CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +103,6 @@
 			files = (
 				166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */,
 				168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */,
-				166D4E7223A659DC00AEA5AD /* AppleScriptObjC.framework in Frameworks */,
 				16BCA03E23A56530002208F4 /* NIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +165,6 @@
 		166D4E6C23A5F38400AEA5AD /* Bridging */ = {
 			isa = PBXGroup;
 			children = (
-				167041F723AE7DBE006DA3DA /* Key */,
 				16AD4AD723A44E2600F350CA /* TerraTouchBar-Bridging-Header.h */,
 				166D4E6D23A5F3C800AEA5AD /* NSTouchBar.h */,
 			);
@@ -207,24 +196,6 @@
 				164A57B423AAC4A7000B68A1 /* TCPClientHandler.swift */,
 			);
 			path = Client;
-			sourceTree = "<group>";
-		};
-		167041F623AE5291006DA3DA /* Key */ = {
-			isa = PBXGroup;
-			children = (
-				166D4E6623A5D66B00AEA5AD /* KeySender.swift */,
-				166D4E6A23A5E1AC00AEA5AD /* KeyCode.swift */,
-			);
-			path = Key;
-			sourceTree = "<group>";
-		};
-		167041F723AE7DBE006DA3DA /* Key */ = {
-			isa = PBXGroup;
-			children = (
-				16A131F923A664D700212D3C /* KeyPressBridge.swift */,
-				166D4E7523A65C1800AEA5AD /* KeyPressBridge.applescript */,
-			);
-			path = Key;
 			sourceTree = "<group>";
 		};
 		16AD4AB723A447C700F350CA = {
@@ -295,7 +266,6 @@
 			children = (
 				161CB32A23AED3310010D3C4 /* ObservableObjects */,
 				167041F323AE520A006DA3DA /* TCP */,
-				167041F623AE5291006DA3DA /* Key */,
 				161CB32923AECD8E0010D3C4 /* Extensions */,
 				16C253CB23A8135200C9E8C8 /* Constants.swift */,
 				16C253D623A834FA00C9E8C8 /* RuntimeError.swift */,
@@ -420,20 +390,16 @@
 				168232C123AFE6F70048C8EF /* ObservedViewFrameHostingView.swift in Sources */,
 				160BD71223AD898700D2B9BF /* StatsView.swift in Sources */,
 				16C253D723A834FA00C9E8C8 /* RuntimeError.swift in Sources */,
-				16A131F823A664AA00212D3C /* KeyPressBridge.applescript in Sources */,
 				16C253CC23A8135200C9E8C8 /* Constants.swift in Sources */,
 				16AD4ADC23A458B400F350CA /* InventoryBar.swift in Sources */,
 				16AD4AD423A447DB00F350CA /* AppEventManager.swift in Sources */,
-				166D4E6B23A5E1AC00AEA5AD /* KeyCode.swift in Sources */,
 				168232B923AFB53E0048C8EF /* StatsViewStyle.swift in Sources */,
 				16AD4AE023A459E200F350CA /* Item.swift in Sources */,
-				16A131FA23A664D700212D3C /* KeyPressBridge.swift in Sources */,
 				166D4E6923A5DB3000AEA5AD /* EscapeView.swift in Sources */,
 				16693E8223A792BA00BF12E7 /* ContentView.swift in Sources */,
 				164A57B523AAC4A7000B68A1 /* TCPClientHandler.swift in Sources */,
 				166D4E6523A5D4D000AEA5AD /* EscapeButton.swift in Sources */,
 				16AD4AC423A447C700F350CA /* AppDelegate.swift in Sources */,
-				166D4E6723A5D66B00AEA5AD /* KeySender.swift in Sources */,
 				161CB32523AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift in Sources */,
 				161CB32823AECD7C0010D3C4 /* ChannelInboundHandler.swift in Sources */,
 				160BD71423AD8B3C00D2B9BF /* StatsBar.swift in Sources */,

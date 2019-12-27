@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// A replication of the Touch Bar escape button in the form of a SwiftUI `View`.
-struct EscapeView: View, KeyPress {
+struct EscapeView: View {
     // MARK: - Properties
 
     var body: some View {

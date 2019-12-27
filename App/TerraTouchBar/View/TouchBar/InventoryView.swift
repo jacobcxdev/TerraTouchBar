@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// A SwiftUI `View` which displays the `items` property of an `InventoryBar` instance.
-struct InventoryView: View, KeyPress {
+struct InventoryView: View {
     // MARK: - Properties
 
     /// The `InventoryBar` instance containing the `items` to display.
@@ -26,20 +26,40 @@ struct InventoryView: View, KeyPress {
     }
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 0) {
-                ForEach(0 ..< self.items.count, id: \.self) { index in
-                    HStack(spacing: 0) {
-                        if index == 10 || index == 51 || index == 55 {
-                            Divider()
-                                .padding(.horizontal, 5)
-                        }
-                        ItemView(item: self.items[index], index: index)
-                            .padding(.horizontal, 5)
-                            .onTapGesture {
-                                if index < 10 {
-                                    self.select(atIndex: index)
+        HStack {
+            if items.count >= 10 {
+                HStack(spacing: 0) {
+                        ForEach(0 ..< 10, id: \.self) { index in
+                            HStack(spacing: 0) {
+                                ItemView(item: self.items[index], index: index)
+                                    .padding(.horizontal, 5)
+                                    .onTapGesture {
+                                        self.select(atIndex: index)
                                 }
+                            }
+                        }
+                    }
+                Divider()
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 0) {
+                        ForEach(10 ..< self.items.count, id: \.self) { index in
+                            HStack(spacing: 0) {
+                                if index == 50 || index == 54 {
+                                    Group {
+                                        Divider()
+                                        Divider()
+                                    }
+                                        .padding(.horizontal, 5)
+                                } else if index % 10 == 0 {
+                                    Divider()
+                                        .padding(.horizontal, 5)
+                                }
+                                ItemView(item: self.items[index], index: index)
+                                    .padding(.horizontal, 5)
+                                    .onTapGesture {
+                                        // TODO: Swapping
+                                }
+                            }
                         }
                     }
                 }

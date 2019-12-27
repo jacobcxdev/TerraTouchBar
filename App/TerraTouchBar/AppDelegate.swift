@@ -8,7 +8,6 @@
 
 import Cocoa
 import SwiftUI
-import AppleScriptObjC
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -22,22 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     /// The `TouchBarController` instance which controls the touch bar.
     let touchBarController = TouchBarController()
-
-    /// The `KeyPressBridge` instance which employs a method to send a key press from a given key code.
-    var keyPressBridge: KeyPressBridge?
-
-    // MARK: - Init Methods
-
-    override init() {
-        // MARK: Load AppleScript KeyPressBridge
-        Bundle.main.loadAppleScriptObjectiveCScripts()
-        if let keyPressBridgeClass: AnyClass = NSClassFromString("KeyPressBridge") {
-            if let keyPressBridge = keyPressBridgeClass.alloc() as? KeyPressBridge {
-                self.keyPressBridge = keyPressBridge
-            }
-        }
-        super.init()
-    }
 
     // MARK: - Instance Methods
 

@@ -26,4 +26,8 @@ class ObservableTimer: ObservableObject {
             self?.objectWillChange.send()
         }
     }
+
+    deinit {
+        timer.invalidate()
+    }
 }
