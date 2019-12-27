@@ -43,8 +43,11 @@ extension NSImage {
         guard let cgImage = self.cgImage else {
             return []
         }
-        let size = { () -> CGSize in
-            sliceSize == nil ? self.sliceSize(axis: axis, slices: slices) : sliceSize!
+        let size = { [weak self] () -> CGSize in
+            guard let self = self else {
+                return .zero
+            }
+            return sliceSize == nil ? self.sliceSize(axis: axis, slices: slices) : sliceSize!
         }()
         var cgImageSlices = [CGImage]()
         var rect = CGRect(origin: .zero, size: size)
