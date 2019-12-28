@@ -27,12 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // MARK: Setup ContentView
 
-        var components: StatsView.ViewComponent = .all
-        if let svcString = UserDefaults.standard.string(forKey: Constants.svcKey), let svc = StatsView.ViewComponent(rawValue: svcString) {
+        var components: StatsViewStyle.ViewComponent = .all
+        if let svcString = UserDefaults.standard.string(forKey: Constants.svcKey), let svc = StatsViewStyle.ViewComponent(rawValue: svcString) {
             components = svc
         }
+        let shb = UserDefaults.standard.bool(forKey: Constants.shbKey)
 
-        let contentView = ContentView(touchBarController: touchBarController, statsViewComponentSelection: components)
+        let contentView = ContentView(touchBarController: touchBarController, statsViewComponentSelection: components, stickyHotbar: shb)
 
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),

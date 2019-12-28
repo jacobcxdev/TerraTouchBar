@@ -32,6 +32,9 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
     /// The current mana for the Terraria player.
     @Published var currentMana: Double = 0
 
+    /// The style of the `StatsView` instance stored in the `hostingView.rootView` property, dictating the components to display.
+    @ObservedObject var style = StatsViewStyle()
+
     // MARK: - Init Methods
 
     override init(identifier: NSTouchBarItem.Identifier) {
@@ -48,21 +51,10 @@ class StatsBar: NSCustomTouchBarItem, ObservableObject, ObservedViewFrameDelegat
 
     /// Performs setup operations on the `StatsBar` instance.
     private func setup() {
-        var components: StatsView.ViewComponent = .all
-        if let svcString = UserDefaults.standard.string(forKey: Constants.svcKey), let svc = StatsView.ViewComponent(rawValue: svcString) {
-            components = svc
-        }
         visibilityPriority = .high
-        hostingView = ObservedViewFrameHostingView(rootView: StatsView(statsBar: self, components: components))
+        hostingView = ObservedViewFrameHostingView(rootView: StatsView(statsBar: self))
         hostingView.delegate = self
         view = hostingView
-    }
-
-    /// Sets the components to display in the `StatsView` instance at `hostingView.rootView`.
-    /// - Parameter components: The components to display.
-    func setStatsViewComponents(components: StatsView.ViewComponent) {
-        hostingView.rootView.style.components = components
-        UserDefaults.standard.set(components.rawValue, forKey: Constants.svcKey)
     }
 
     /// Updates the stats properties of the `StatsBar` instance from a `JSON` object.

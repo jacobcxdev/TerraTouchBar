@@ -43,6 +43,9 @@ struct Constants {
 
     // MARK: - UserDefaults
 
-    /// The key for the saved `StatsView.ViewComponent` value.
+    /// The key for the saved bool dictating whether the hotbar should be sticky.
+    static let shbKey = "stickyHotbar"
+
+    /// The key for the saved `StatsViewStyle.ViewComponent` value.
     static let svcKey = "statsViewComponents"
 }

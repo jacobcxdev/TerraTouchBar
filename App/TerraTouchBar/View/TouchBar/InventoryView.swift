@@ -26,30 +26,61 @@ struct InventoryView: View {
     }
 
     var body: some View {
-        HStack {
-            if items.count >= 10 {
-                HStack(spacing: 0) {
-                        ForEach(0 ..< 10, id: \.self) { index in
+        if inventoryBar.stickyHotbar {
+            return AnyView(
+                HStack {
+                    if items.count >= 10 {
+                        HStack(spacing: 0) {
+                            ForEach(0 ..< 10, id: \.self) { index in
+                                HStack(spacing: 0) {
+                                    ItemView(item: self.items[index], index: index)
+                                        .padding(.horizontal, 5)
+                                        .onTapGesture {
+                                            self.select(atIndex: index)
+                                    }
+                                }
+                            }
+                        }
+                        Divider()
+                        ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 0) {
-                                ItemView(item: self.items[index], index: index)
-                                    .padding(.horizontal, 5)
-                                    .onTapGesture {
-                                        self.select(atIndex: index)
+                                ForEach(10 ..< self.items.count, id: \.self) { index in
+                                    HStack(spacing: 0) {
+                                        if index == 50 || index == 54 {
+                                            Group {
+                                                Divider()
+                                                Divider()
+                                            }
+                                            .padding(.horizontal, 5)
+                                        } else if index % 10 == 0 {
+                                            Divider()
+                                                .padding(.horizontal, 5)
+                                        }
+                                        ItemView(item: self.items[index], index: index)
+                                            .padding(.horizontal, 5)
+                                            .onTapGesture {
+                                                // TODO: Swapping
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
-                Divider()
+                }
+                .frame(maxWidth: 1000)
+            )
+        } else {
+            return AnyView(
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
-                        ForEach(10 ..< self.items.count, id: \.self) { index in
+                        ForEach(0 ..< self.items.count, id: \.self) { index in
                             HStack(spacing: 0) {
-                                if index == 50 || index == 54 {
+                                if index == 10 || index == 50 || index == 54 {
                                     Group {
                                         Divider()
                                         Divider()
                                     }
-                                        .padding(.horizontal, 5)
+                                    .padding(.horizontal, 5)
                                 } else if index % 10 == 0 {
                                     Divider()
                                         .padding(.horizontal, 5)
@@ -57,15 +88,16 @@ struct InventoryView: View {
                                 ItemView(item: self.items[index], index: index)
                                     .padding(.horizontal, 5)
                                     .onTapGesture {
-                                        // TODO: Swapping
+                                        if index < 10 {
+                                            self.select(atIndex: index)
+                                        }
                                 }
                             }
                         }
                     }
                 }
-            }
+            )
         }
-        .frame(maxWidth: 1000)
     }
 
     // MARK: - Init Methods

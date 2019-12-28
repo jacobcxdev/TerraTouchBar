@@ -10,24 +10,32 @@ import SwiftUI
 
 struct ContentView: View {
     var touchBarController: TouchBarController
-    @State var statsViewComponentSelection: StatsView.ViewComponent = .all
+    @State var statsViewComponentSelection: StatsViewStyle.ViewComponent = .all
+    @State var stickyHotbar = false
 
     var body: some View {
         VStack {
-            HStack {
-                Text("Stats to display:")
-                Picker(selection: $statsViewComponentSelection, label: EmptyView()) {
-                    Text("All").tag(StatsView.ViewComponent.all)
-                    Text("Life").tag(StatsView.ViewComponent.life)
-                    Text("Mana").tag(StatsView.ViewComponent.mana)
+            VStack {
+                HStack {
+                    Text("Stats to display:")
+                    Picker(selection: $statsViewComponentSelection, label: EmptyView()) {
+                        Text("All").tag(StatsViewStyle.ViewComponent.all)
+                        Text("Life").tag(StatsViewStyle.ViewComponent.life)
+                        Text("Mana").tag(StatsViewStyle.ViewComponent.mana)
+                    }
+                    .scaledToFit()
                 }
-                .scaledToFit()
+                .fixedSize()
+                .onReceive([statsViewComponentSelection].publisher) { output in
+                    self.touchBarController.statsBar.style.components = output
+                }
+                Toggle("Sticky hotbar", isOn: $stickyHotbar)
+                    .fixedSize()
+                    .onReceive([stickyHotbar].publisher) { output in
+                        self.touchBarController.inventoryBar.stickyHotbar = output
+                }
             }
             .padding()
-            .fixedSize()
-            .onReceive([statsViewComponentSelection].publisher) { output in
-                self.touchBarController.statsBar.setStatsViewComponents(components: output)
-            }
             Divider()
             Button("Preview") {
                 DispatchQueue.global().async {

@@ -15,9 +15,6 @@ struct StatsView: View {
     /// The `StatsBar` instance containing the stats to display.
     @ObservedObject var statsBar: StatsBar
 
-    /// The style of the `StatsView`, dictating the components to display.
-    @ObservedObject var style: StatsViewStyle
-
     /// The scale of the currently pulsating sprite.
     @State private var statsPulseScale: CGFloat = 1
 
@@ -36,10 +33,8 @@ struct StatsView: View {
     /// Creates an instance of `StatsView`.
     /// - Parameters:
     ///   - statsBar: The `StatsBar` instance containing the stats to display.
-    ///   - components: The components which should be displayed.
-    init(statsBar: StatsBar, components: ViewComponent) {
+    init(statsBar: StatsBar) {
         self.statsBar = statsBar
-        self.style = StatsViewStyle(components: components)
     }
 
     // MARK: - Instance Methods
@@ -246,7 +241,7 @@ struct StatsView: View {
     /// - Returns:
     ///   - A SwiftUI `View`.
     private func bodyView() -> some View {
-        switch style.components {
+        switch statsBar.style.components {
         case .life:
             return AnyView(component(.life, axis: .horizontal))
         case .mana:
@@ -267,13 +262,6 @@ struct StatsView: View {
     enum Axis {
         case horizontal
         case vertical
-    }
-
-    /// The components which can be displayed inside a `StatsView`.
-    enum ViewComponent: String {
-        case life
-        case mana
-        case all
     }
 
     /// The individual components which can be displayed inside a `StatsView`.
@@ -298,6 +286,6 @@ struct StatsView_Previews: PreviewProvider {
         statsBar.currentLife = 400
         statsBar.maxMana = 180
         statsBar.currentMana = 180
-        return StatsView(statsBar: statsBar, components: .all)
+        return StatsView(statsBar: statsBar)
     }
 }

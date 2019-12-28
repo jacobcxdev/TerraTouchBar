@@ -19,8 +19,15 @@ class InventoryBar: NSCustomTouchBarItem, ObservableObject {
     /// The `NSHostingView<InventoryView>` instance to display as the `view` property.
     var hostingView: NSHostingView<InventoryView>!
 
-    /// An array of `Item` instances to display in the `InventoryView` which is stored in the `inventoryView` property  — the inventory of the Terraria player.
+    /// An array of `Item` instances to display in the `InventoryView` which is stored in the `hostingView.rootView` property  — the inventory of the Terraria player.
     @Published var items = [Item]()
+
+    /// Whether the hotbar of the `InventoryView` stored in the `hostingView.rootView` should be sticky.
+    @Published var stickyHotbar: Bool! {
+        didSet {
+            UserDefaults.standard.set(stickyHotbar, forKey: Constants.shbKey)
+        }
+    }
 
     // MARK: - Init Methods
 
@@ -38,6 +45,7 @@ class InventoryBar: NSCustomTouchBarItem, ObservableObject {
 
     /// Performs setup operations on the `InventoryBar` instance.
     private func setup() {
+        stickyHotbar = UserDefaults.standard.bool(forKey: Constants.shbKey)
         hostingView = NSHostingView(rootView: InventoryView(inventoryBar: self))
         view = hostingView
     }
