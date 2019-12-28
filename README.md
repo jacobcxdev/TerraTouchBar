@@ -10,5 +10,14 @@ A tModLoader Terraria mod to add Touch Bar functionality to Terraria for support
 ## Usage
 Simply launch Terraria and the TerraTouchBar application. The mod and the application will communicate automatically.
 
+## Notes
+There are currently a few **major** issues with the project, the main one being that there are *vast* memory leaks when receiving updates to the inventory. I've taken the liberty of adding a `Preview` button to the `ContentView`, so that "mockup" updates can be sent. This allows anyone to debug these memory leaks, regardless of whether they own Terraria.
+
+To create the memory leaks (for debugging):
+1) Launch the Xcode project
+2) Build and run
+3) Click the `Preview` button
+4) Leave the application for a few minutes.
+
 ## Mockup
 ![Mockup](https://github.com/jacobcxdev/TerraTouchBar/blob/master/Mockup.png?raw=true)
