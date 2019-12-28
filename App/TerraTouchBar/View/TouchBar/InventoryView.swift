@@ -90,6 +90,8 @@ struct InventoryView: View {
                                     .onTapGesture {
                                         if index < 10 {
                                             self.select(atIndex: index)
+                                        } else {
+                                            // TODO: Swapping
                                         }
                                 }
                             }
