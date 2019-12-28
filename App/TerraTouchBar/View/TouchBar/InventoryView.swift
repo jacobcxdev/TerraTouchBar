@@ -41,7 +41,10 @@ struct InventoryView: View {
                                 }
                             }
                         }
-                        Divider()
+                        HStack(spacing: 10) {
+                            Divider()
+                            Divider()
+                        }
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 0) {
                                 ForEach(10 ..< self.items.count, id: \.self) { index in
@@ -52,7 +55,7 @@ struct InventoryView: View {
                                                 Divider()
                                             }
                                             .padding(.horizontal, 5)
-                                        } else if index % 10 == 0 {
+                                        } else if index > 10 && index % 10 == 0 {
                                             Divider()
                                                 .padding(.horizontal, 5)
                                         }
