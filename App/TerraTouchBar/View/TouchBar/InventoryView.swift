@@ -28,7 +28,7 @@ struct InventoryView: View {
     var body: some View {
         if inventoryBar.stickyHotbar {
             return AnyView(
-                HStack {
+                HStack(spacing: 5) {
                     if items.count >= 10 {
                         HStack(spacing: 0) {
                             ForEach(0 ..< 10, id: \.self) { index in
@@ -81,7 +81,7 @@ struct InventoryView: View {
                                         Divider()
                                     }
                                     .padding(.horizontal, 5)
-                                } else if index % 10 == 0 {
+                                } else if index > 0 && index % 10 == 0 {
                                     Divider()
                                         .padding(.horizontal, 5)
                                 }
