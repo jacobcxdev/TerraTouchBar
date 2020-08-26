@@ -18,14 +18,9 @@ class AppEventManager {
 
     // MARK: - Init Methods
 
-    /// Creates an instance of `AppEventManager`.
-    init() {
-        setup()
-    }
-
     /// Creates an instance of `AppEventManager`, given a `TouchBarController`.
     /// - Parameter touchBarController: A `TouchBarController` instance which currently controls the Touch Bar.
-    init(touchBarController: TouchBarController) {
+    init(touchBarController: TouchBarController? = nil) {
         self.touchBarController = touchBarController
         setup()
     }

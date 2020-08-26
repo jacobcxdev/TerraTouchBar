@@ -52,6 +52,23 @@ struct ContentView: View {
                     client.shutdown()
                 }
             }
+            Button("Send 1000 updates") {
+                for _ in 0 ..< 1000 {
+                    DispatchQueue.global().async {
+                        let client = TCPClient(
+                            host: Constants.serverAddress,
+                            port: Constants.serverPort,
+                            handler: TCPClientHandler(message: .mockupUpdate)
+                        )
+                        do {
+                            try client.run()
+                        } catch {
+                            print(error)
+                        }
+                        client.shutdown()
+                    }
+                }
+            }
         }
         .padding()
         .fixedSize()

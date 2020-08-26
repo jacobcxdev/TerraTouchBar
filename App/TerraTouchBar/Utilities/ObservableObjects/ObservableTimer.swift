@@ -13,7 +13,7 @@ class ObservableTimer: ObservableObject {
     // MARK: - Properties
 
     /// The `Timer` instance to create the delay between published changes.
-    var timer: Timer!
+    private var timer: Timer!
 
     // MARK: - Init Methods
 

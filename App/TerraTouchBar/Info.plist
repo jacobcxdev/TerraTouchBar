@@ -36,5 +36,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>SUFeedURL</key>
+	<string>https://jacobcxdev-github-releases.herokuapp.com/TerraTouchBar/appcast.xml</string>
 </dict>
 </plist>

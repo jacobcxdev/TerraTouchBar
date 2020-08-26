@@ -51,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         eventManager.touchBarController = touchBarController
 
         // MARK: Start TCPServer
+
         DispatchQueue.global().async {
             let server = TCPServer(host: Constants.serverAddress, port: Constants.serverPort)
             do {
@@ -62,6 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         // MARK: Start TCPClient
+
         DispatchQueue.global().async {
             let client = TCPClient(
                 host: Constants.clientAddress,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1609ECAB23C80A7400F9F72F /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167C56D423B7F1D2003CC669 /* Sparkle.framework */; };
+		1609ECAC23C80A7400F9F72F /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 167C56D423B7F1D2003CC669 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		160BD71223AD898700D2B9BF /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BD71123AD898700D2B9BF /* StatsView.swift */; };
 		160BD71423AD8B3C00D2B9BF /* StatsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BD71323AD8B3C00D2B9BF /* StatsBar.swift */; };
 		161CB32523AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CB32423AECD5D0010D3C4 /* NSTouchBarItem.Identifier.swift */; };
@@ -40,16 +42,16 @@
 		16C253D223A82DB800C9E8C8 /* ObservableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D123A82DB800C9E8C8 /* ObservableTimer.swift */; };
 		16C253D423A82DDC00C9E8C8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D323A82DDC00C9E8C8 /* ItemView.swift */; };
 		16C253D723A834FA00C9E8C8 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C253D623A834FA00C9E8C8 /* RuntimeError.swift */; };
-		16C253D923A83C5000C9E8C8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 16C253D823A83C5000C9E8C8 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		16BCA02B23A51F51002208F4 /* Embed Frameworks */ = {
+		1609ECAD23C80A7400F9F72F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1609ECAC23C80A7400F9F72F /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +70,8 @@
 		166D4E6423A5D4D000AEA5AD /* EscapeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeButton.swift; sourceTree = "<group>"; };
 		166D4E6823A5DB3000AEA5AD /* EscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeView.swift; sourceTree = "<group>"; };
 		166D4E6D23A5F3C800AEA5AD /* NSTouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTouchBar.h; sourceTree = "<group>"; };
-		166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		167041F823AEB84A006DA3DA /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		167C56D423B7F1D2003CC669 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		168232B823AFB53E0048C8EF /* StatsViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewStyle.swift; sourceTree = "<group>"; };
 		168232C023AFE6F70048C8EF /* ObservedViewFrameHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedViewFrameHostingView.swift; sourceTree = "<group>"; };
 		1687014B23A6BDAF00C6BC40 /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				166D4E6323A5A67500AEA5AD /* SwiftyJSON in Frameworks */,
 				168232BC23AFDB600048C8EF /* TinyConstraints in Frameworks */,
 				16BCA03E23A56530002208F4 /* NIO in Frameworks */,
+				1609ECAB23C80A7400F9F72F /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +279,7 @@
 		16BCA02323A51F26002208F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				166D4E7123A659DC00AEA5AD /* AppleScriptObjC.framework */,
+				167C56D423B7F1D2003CC669 /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,8 +294,8 @@
 				16AD4ABC23A447C700F350CA /* Sources */,
 				16AD4ABD23A447C700F350CA /* Frameworks */,
 				16AD4ABE23A447C700F350CA /* Resources */,
-				16BCA02B23A51F51002208F4 /* Embed Frameworks */,
 				16C253D523A8322C00C9E8C8 /* ShellScript */,
+				1609ECAD23C80A7400F9F72F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,7 +354,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C253D923A83C5000C9E8C8 /* .swiftlint.yml in Resources */,
 				16AD4AC823A447C700F350CA /* Assets.xcassets in Resources */,
 				16AD4ACB23A447C700F350CA /* Main.storyboard in Resources */,
 			);
@@ -547,15 +549,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TerraTouchbar/TerraTouchbar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9489Q3YVAN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TerraTouchbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,15 +586,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TerraTouchbar/TerraTouchbar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9489Q3YVAN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TerraTouchbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
